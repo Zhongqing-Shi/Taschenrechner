@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main class="cal">
+    <div class="header">
+      <h1>calc</h1>
+        <div class="themes">
+          <p>Theme</p>
+          <div class="theme-toggle">
+            <div class="theme-numbers">
+              <div id="color-theme1" class="number">1</div>
+              <div id="color-theme2" class="number">2</div>
+              <div id="color-theme3" class="number">3</div>
+            </div>
+            <div class="toggle">
+              <button id="theme1" class="toggle-button" ></button>
+              <button id="theme2" class="toggle-button" ></button>
+              <button id="theme3" class="toggle-button" ></button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div id="screen" class="screen" >0</div>
+    <div class="keyboard">
+      <div class="row">
+        <div><button class="key" >7</button></div>
+        <div><button class="key" >8</button></div>
+        <div><button class="key" >9</button></div>
+        <div><button id = "del" >DEL</button></div>
+      </div>
+      <div class="row">
+        <div><button class="key" >4</button></div>
+        <div><button class="key" >5</button></div>
+        <div><button class="key" >6</button></div>
+        <div><button class="operator" id = "plus" >+</button></div>
+      </div>
+      <div class="row">
+        <div><button class="key" >1</button></div>
+        <div><button class="key" >2</button></div>
+        <div><button class="key" >3</button></div>
+        <div><button class="operator" id = "minus" >-</button></div>
+      </div>
+      <div class="row">
+        <div><button id="point" >.</button></div>
+        <div><button class="key" >0</button></div>
+        <div><button class="operator" id="divide" >/</button></div>
+        <div><button class="operator" id="multiply">*</button></div>
+      </div>
+      <div class="row">
+        <div class="last-row"><button id="reset">Reset</button></div>
+        <div class="last-row"><button id="equal">=</button></div>
+      </div>
+
+    </div>
+  </main>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="/js/script.js"></script>
+</body>
+</html>

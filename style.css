@@ -1,0 +1,269 @@
+:root, html[data-theme="theme1"] {
+  --bg-main: hsl(222, 26%, 31%);
+  --bg-keyboard: hsl(223, 31%, 20%);
+  --bg-screen: hsl(224, 36%, 15%);
+  --bg-key: hsl(225, 21%, 49%);
+  --bg-key-shadow: hsl(224, 28%, 35%);
+  --equal-key: hsl(6, 63%, 50%);
+  --equal-key-shadow: hsl(6, 70%, 34%);
+  --key-num: hsl(30, 25%, 89%);
+  --key-num-shadow: hsl(28, 16%, 65%);
+  --key-text:  hsl(221, 14%, 31%);
+  --equal-text: white;
+  --text:white;
+}
+
+html[data-theme="theme2"] {
+  --bg-main: hsl(0, 0%, 90%);
+  --bg-keyboard: hsl(0, 5%, 81%);
+  --bg-screen: hsl(0, 0%, 93%);
+  --bg-key: hsl(185, 42%, 37%);
+  --bg-key-shadow: hsl(185, 58%, 25%);
+  --equal-key: hsl(25, 98%, 40%);
+  --equal-key-shadow: hsl(25, 99%, 27%);
+  --key-num: hsl(45, 7%, 89%);
+  --key-num-shadow: hsl(35, 11%, 61%);
+  --key-text:  hsl(60, 10%, 19%);
+  --equal-text: white;
+  --text:hsl(60, 10%, 19%);
+}
+
+html[data-theme="theme3"] {
+  --bg-main: hsl(268, 75%, 9%);
+  --bg-keyboard: hsl(268, 71%, 12%);
+  --bg-screen: hsl(268, 71%, 12%);
+  --bg-key: hsl(281, 89%, 26%);
+  --bg-key-shadow: hsl(285, 91%, 52%);
+  --equal-key: hsl(176, 100%, 44%);
+  --equal-key-shadow: hsl(177, 92%, 70%);
+  --key-num: hsl(268, 47%, 21%);
+  --key-num-shadow: hsl(290, 70%, 36%);
+  --key-text: hsl(52, 100%, 62%);
+  --equal-text: hsl(198, 20%, 13%);
+  --text:hsl(52, 100%, 62%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-main);
+}
+
+button {
+  font-size: 30px;
+  text-align: center;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+}
+
+.cal {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+h1, p, .screen {
+  color: var(--text);
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+.themes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+p {
+  margin-right: 10px;
+}
+
+.theme-numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 5px;
+}
+
+.number {
+  padding: 5px;
+  color: var(--text);
+}
+
+.toggle {
+  background-color: var(--bg-keyboard);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+}
+
+.toggle-button {
+  background-color: var(--equal-key);
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  margin: 5px;
+  border: none;
+}
+
+#theme2 {
+  opacity: 0;
+}
+
+#theme3 {
+  opacity: 0;
+}
+
+.screen {
+  background-color: var(--bg-screen);
+  border-radius: 10px;
+  font-size: 30px;
+  margin-bottom: 30px;
+  padding: 10px;
+  text-align: right;
+}
+
+.keyboard {
+  background-color: var(--bg-keyboard);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.key, #point {
+  height: 50px;
+  border-radius: 10px;
+  width: 80px;
+  background-color: var(--key-num);
+  color: var(--key-text);
+  -webkit-box-shadow: 0 5px var(--key-num-shadow);
+          box-shadow: 0 5px var(--key-num-shadow);
+}
+
+.key:hover, #point:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.operator {
+  height: 50px;
+  border-radius: 10px;
+  width: 80px;
+  background-color: var(--key-num);
+  color: var(--key-text);
+  -webkit-box-shadow: 0 5px var(--key-num-shadow);
+          box-shadow: 0 5px var(--key-num-shadow);
+}
+
+.operator:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+#del {
+  height: 50px;
+  border-radius: 10px;
+  width: 80px;
+  background-color: var(--bg-key);
+  color: white;
+  -webkit-box-shadow: 0 5px var(--bg-key-shadow);
+          box-shadow: 0 5px var(--bg-key-shadow);
+}
+
+#del:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.last-row {
+  width: 50%;
+  margin: 0 4%;
+}
+
+#reset {
+  height: 50px;
+  border-radius: 10px;
+  width: 100%;
+  background-color: var(--bg-key);
+  color: white;
+  -webkit-box-shadow: 0 5px var(--bg-key-shadow);
+          box-shadow: 0 5px var(--bg-key-shadow);
+}
+
+#reset:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+#equal {
+  height: 50px;
+  border-radius: 10px;
+  width: 100%;
+  background-color: var(--equal-key);
+  color: var(--equal-text);
+  -webkit-box-shadow: 0 5px var(--equal-key-shadow);
+          box-shadow: 0 5px var(--equal-key-shadow);
+}
+
+#equal:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+@media (max-width: 500px) {
+  .cal {
+    max-width: 300px;
+  }
+  .key, #point, .operator {
+    width: 45px;
+  }
+  #del {
+    width: 45px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
+/*# sourceMappingURL=style.css.map */
