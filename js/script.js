@@ -1,25 +1,29 @@
 "use strict";
 let display=document.getElementById("screen");
-//display.innerText=tolocalstring("13567.98763");
 let inputNum="";
+//to save all the input numbers and operators
 let temp=[];
 
+//add functions for every number key
 let num=document.getElementsByClassName("key");
 for(let i=0; i<num.length; i++){
     num[i].addEventListener("click",input);
 }
 
+//add functions for every operator key
 let oper=document.getElementsByClassName("operator");
 for(let i=0; i<oper.length; i++){
     oper[i].addEventListener("click",operate);
 }
 
+//add functions for other keys
 document.getElementById("del").addEventListener("click", deleteNumber);
 document.getElementById("reset").addEventListener("click",resetAll);
 document.getElementById("equal").addEventListener("click",equal);
 document.getElementById("point").addEventListener("click",checkpoint);
 
-function checkpoint(){
+//check if the input number has already a point
+function checkpoint(event){
     if(inputNum.includes(".")){
         inputNum+="";
     }else{
@@ -27,6 +31,7 @@ function checkpoint(){
     }
 }
 
+//delete number
 function deleteNumber(){
     if(display.innerText=="0"){
         display.innerText="0";
@@ -52,6 +57,7 @@ function deleteNumber(){
     console.log(inputNum);
 }
 
+//input numbers
 function input(event){
     let value=event.target.innerText;
     inputNum+=value;
@@ -78,12 +84,14 @@ function input(event){
     }
 }
 
+//functions for + - * /, the four operators
 function operate(event){
     temp.push(inputNum);
     temp.push(event.target.innerText);
     inputNum="";
 }
 
+//export the final result on the screen, as the function of equal key
 function equal(){
     temp.push(inputNum);
     let join=temp.join("")
@@ -92,12 +100,14 @@ function equal(){
     inputNum=display.innerText;
 }
 
+//reset the calculator
 function resetAll(){
     display.innerText="0";
     inputNum="";
     temp=[];
 }
 
+//switch a number to string with local settings, in this case to add comma to spilt every 3 digits.
 function tolocalstring(str){
     let strnum=parseInt(str);
     let strnew=strnum.toLocaleString('zh');
